@@ -62,5 +62,17 @@ console.log(week10)
 //the new area needed to not prune which is why we bring the space variaable in here
 let newArea =  week10 * space
 
-//Finding the new Area 
-let newRadius = newArea / PI
+//Finding the new radius 
+let newRadius = Math.sqrt(newArea / PI)
+
+console.log(newRadius)
+
+// part 3
+
+try {
+    if (newArea > area) {
+        throw new Error(`The garden is too small. We need ${newArea} square meters`)
+    }
+} catch (error) {
+    console.log('Error: ', error)
+}
